@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 class Node4
@@ -32,7 +33,7 @@ public class CancelOutLinkList
 		}
 	}
 	
-	public void display()
+	public void traverse()
 	{
 		Node4 ptr = head;
 		if(head == null)
@@ -88,7 +89,7 @@ public class CancelOutLinkList
 			
 			if( flag == 1 )
 			{
-				if( c > 0)
+				if( c > 0 && ptr1 != head)
 				{
 					if( preptr1.next == null)
 					{
@@ -130,11 +131,11 @@ public class CancelOutLinkList
 		}
 		
 		System.out.println("Link list is ");
-		o.display();
+		o.traverse();
 		
 		o.cancelElement();
 		System.out.println("After elements are subtracted :");
-		o.display();
+		o.traverse();
 		ip.close();
 	}
 
