@@ -54,7 +54,7 @@ public class Intersection
 		Node p1 = o1.head;
 		Node p2 = o2.head;
 		
-		while( p1.next != null && p2.next != null )
+		while( p1 != null && p2 != null )
 		{
 			if( p1.data > p2.data )
 			{
@@ -72,33 +72,6 @@ public class Intersection
 			}
 		}
 		
-		while( p1 != null )
-		{
-			if( p2 != null )
-			{
-				if( p2.data == p1.data)
-				{
-					o3.insertNode(p1.data);
-					p1 = p1.next;
-				}
-			}
-			else
-				p1 = p1.next;
-		}
-		
-		while( p2 != null )
-		{
-			if( p1 != null )
-			{
-				if( p2.data == p1.data)
-				{
-					o3.insertNode(p2.data);
-					p2 = p2.next;
-				}
-			}
-			else
-				p2 = p2.next;
-		}
 	}
 	
 	public static void main(String[] args) 
